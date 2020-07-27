@@ -6,10 +6,35 @@
     <link rel='stylesheet' type='text/css' href='styles/ui.css'>
     <style>
         body {
-            background-image: url("Assets/nebula.jpg");
+            background: linear-gradient(90deg, rgba(177, 64, 200, 1) 0%, rgba(109, 9, 121, 1) 35%, rgba(45, 1, 62, 1) 100%);
+            background-image: url("imgs/space1.jpg");
+        }
+        
+        .anshul {
+            color: white;
+            font-family: Cambria;
+            size: 1000px;
+            text-align: center;
+            background-color: white;
+            height: 20px;
+            width: 170px;
+            margin-left: 190px;
+            letter-spacing: initial;
+            text-decoration: transparent;
+        }
+        
+        .anshul:link {
+            color: white;
         }
     </style>
 </head>
+
+<div class='suit' id='suit'>
+    <img src="imgs/suit.png" id="suit" class="suit" HEIGHT="600" WIDTH="700" />
+</div>
+<div class='robot' id='robot'>
+    <img src='imgs/robot.png' id="robot" class="robot" HEIGHT="600" WIDTH="700" />
+</div>
 
 <body>
     <div class='main-container'>
@@ -30,26 +55,37 @@
             <!-- div.intial displays the starting controls -->
             <div class='intial'>
                 <div class='difficulty'>
-                    <span class='level not-selected' id="blind">Blind</span>
-                    <span class='level not-selected' id="novice">Novice</span>
-                    <span class='level not-selected' id="master">Master!</span>
+                    <span class='level not-selected' id="blind">Mercury</span>
+                    <span class='level not-selected' id="novice">Venus</span>
+                    <span class='level not-selected' id="master">Earth</span>
                 </div>
 
-                <div class='start'> Start </div>
+                <div class='start glow'> Launch </div>
             </div>
 
+
             <!-- div.ingame displays in-game messages and controls -->
-            <div class='ingame' id="human">It's your turn ...</div>
+            <div class='ingame glow' id="human">It's your turn ...</div>
+
             <div class='ingame' id="ai">
                 <img src="imgs/robot.png" id="robot" class="robot" />
-                <p>Waint for it ...</p>
+                <p>Wait for it ...</p>
             </div>
-            <div class='ingame' id="won">You won !</div>
-            <div class='ingame' id="lost">You lost !</div>
-            <div class='ingame' id="draw">It's a Draw</div>
+            <div class='ingame glow' id="won">You won !</div>
+            <div class='ingame glow' id="lost">You lost !</div>
+            <div class='ingame glow' id="draw">It's a Draw</div>
+            <div class='ingame glow' id="replay">Re-Launch</div>
         </div>
+        <div class="anshul">
+            <p> <a href="https://www.linkedin.com/in/anshul-singh-a28604181/">&#169; Made By Anshul Singh
+            </a>
+            </p>
+        </div>
+
     </div>
+
     <canvas id="mycanvas"></canvas>
+
     <script src="scripts/jquery-1.10.1.min.js">
     </script>
     <script src="scripts/ui.js"></script>
